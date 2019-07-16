@@ -19,5 +19,7 @@ Execute command:
     composer install
 Create .env file and copy the parameters from .env.example
 
+Generate a Key:
+    php artisan key:generate
 Run project:
     php artisan serve
