@@ -88,7 +88,7 @@ class HyperWalletRepository
                 ->setBankAccountId($request->get('bankAccountId'))
                 ->setBankAccountPurpose($request->get('bankAccountPurpose'))
                 ->setBankAccountRelationship($request->get('bankAccountRelationship'))
-                ->setBranchId($request->get('setBranchId'))
+                ->setBranchId($request->get('branchId'))
 
                 //default parameters
                 ->setTransferMethodCountry("US")
