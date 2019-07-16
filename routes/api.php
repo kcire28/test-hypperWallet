@@ -16,3 +16,28 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+
+
+Route::group(['prefix' => 'users'], function() {
+
+    Route::get('', "HyperWalletController@listUsers");
+
+    Route::post('', 'HyperWalletController@createUser');
+});
+
+
+Route::group(['prefix' => 'bank_account'], function() {
+
+    Route::get('/{token}', "HyperWalletController@listPayments");
+
+    Route::post('', 'HyperWalletController@createBanckAccount');
+});
+
+Route::group(['prefix' => 'payment'], function() {
+
+    Route::post('', 'HyperWalletController@createPayment');
+
+});
